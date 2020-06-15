@@ -1,0 +1,40 @@
+.button {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 200ms ease-in;
+    border-radius: 4px;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &-primary {
+        border: 1px solid $white;
+        background-color: $blue2;
+        color: $white;
+    }
+
+    &-secondary {
+        border: 1px solid $gray;
+        color: $black2;
+        background-color: $white;
+    }
+}
+
+
+@mixin buttonWithIcon($iconUrl, $width, $height) {
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 20px;
+        background: url($iconUrl) no-repeat center;
+        vertical-align: bottom;
+    }
+}

@@ -1,0 +1,45 @@
+.checkout-section {
+    @extend .promo-section;
+    background-color: $black1;
+
+    &__container {
+        @include container;
+        min-height: 880px;
+    }
+
+    &__img {
+        @extend .promo-section__img; 
+    }
+
+    &__header {
+        @include latoFont($bold);
+        padding: 10% 0 17px;
+        text-align: center;
+        font-size: 36px;
+        color: white;
+        text-transform: uppercase;
+        
+        &-custom {
+            color: $blue2;
+        }
+    }
+
+    &__description {
+        margin-bottom: 80px;
+        text-align: center;
+        color: $gray1;
+        font-size: 18px;
+    }
+
+    &__form {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: $tablet) {
+    .checkout-section {
+        &__description {
+            margin-bottom: 40px;
+        }
+    }
+}

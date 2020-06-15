@@ -1,0 +1,41 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    &__container {
+        @include container;
+        height: 100px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+    }
+}
+
+@media (max-width: $tablet) {
+    .header {
+        &__container {
+            flex-direction: column;
+            padding: 20px 15px;
+            height: auto;
+        }
+
+        &__logo {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .header {
+        position: static;
+
+        &__navigation {
+            width: 100%;
+        }
+    }
+}

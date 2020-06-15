@@ -1,0 +1,14 @@
+.form__input {
+    @include placeholderColor($black1);
+    width: 100%;
+    background: $gray2;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid $white;
+    color: $black1;
+    font-size: 18px;
+
+    &:focus {
+        outline: none;
+    }
+}  

@@ -1,0 +1,43 @@
+@mixin latoFont($weight) {
+    font-family: 'Lato', sans-serif;
+    font-weight: $weight;
+}
+
+@mixin ralewayFont($weight) {
+    font-family: 'Raleway', sans-serif;
+    font-weight: $weight;
+}
+
+@mixin container {
+    width: 100%;
+    max-width: $containerWidth;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 15px;
+    
+    @media (max-width: $tablet) { 
+        max-width: 100%; 
+    }
+}
+
+@mixin placeholderColor($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+
+    &:-moz-placeholder {
+        color: $color;
+        opacity: 1;  
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+        opacity: 1;      
+    }  
+}

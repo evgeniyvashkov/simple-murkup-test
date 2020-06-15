@@ -1,0 +1,22 @@
+.social-list {
+    &__link {
+        display: inline-block;
+        box-sizing: border-box;
+        margin-left: 40px;
+        padding-left: 24px;
+        min-height: 15px;
+        line-height: 15px;
+        font-size: 13px;
+        color: $gray3;
+        background: no-repeat left center;
+        white-space: nowrap;
+
+        &_email {
+            background-image: url('../img/email-info-icon.png');
+        }
+
+        &_vk {
+            background-image: url('../img/vk-icon.png');
+        }    
+    }
+}

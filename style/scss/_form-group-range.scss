@@ -1,0 +1,77 @@
+$rangeButtonSize: 24px;
+$rangeButtonBorderWidth: 3px;
+
+.form__group_range {
+    &.noUi-target {
+        position: relative;
+        z-index: 0; 
+
+        .form__group-label {
+            margin-bottom: 25px;
+            box-sizing: border-box;
+            padding-right: 50px;
+            position: relative;
+
+            .range-value {
+                position: absolute; 
+                right: 5px;
+                top: 2px;
+            }
+        }
+    }
+
+    .noUi-base {
+        width: 100%;
+        height: $rangeButtonSize/4;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        border: 1px solid $white;
+        border-radius: 4px;
+        background: $gray6;
+
+        .noUi-connects {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+
+            margin: 0 (-$rangeButtonSize/2);
+            width: calc(100% + #{$rangeButtonSize});
+        }
+
+        .noUi-origin {
+            width: 10%;
+            height: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+
+        .noUi-handle {
+            position: absolute;
+            width: $rangeButtonSize;
+            height: $rangeButtonSize;
+            right: -$rangeButtonSize/2;
+            top: -($rangeButtonSize/2 - $rangeButtonBorderWidth);
+            border-radius: 50%;
+            box-sizing: border-box;
+            background: $blue;
+            border: $rangeButtonBorderWidth solid $blue3;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+
+        .noUi-touch-area {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

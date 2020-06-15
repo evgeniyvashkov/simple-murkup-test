@@ -1,0 +1,88 @@
+.ordering {
+    &__steps-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__step {
+        width: 135px;
+        position: relative;
+
+        &:not(:last-child) {
+            &:after {
+                content: '';
+                position: absolute;
+                top: 46px;
+                left: 144px;
+                width: 102px;
+                color: $white;
+                height: 6px;
+                background: url('../img/dots.png') no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        &-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 17px;
+            box-sizing: border-box;
+            border: 5px solid $blue3;
+            border-radius: 50%;
+            background: $blue4 no-repeat center;
+
+            &_search {
+                background-image: url('../img/search-icon.png');
+            }
+
+            &_percentage {
+                background-image: url('../img/percentage-icon.png');
+            }
+
+            &_order {
+                background-image: url('../img/order-icon.png');
+                background-position: 24px 20px;
+            }
+
+            &_email {
+                background-image: url('../img/email-icon.png');
+            }
+
+            &_pay {
+                background-image: url('../img/money-icon.png');
+            }
+        }
+
+        &-description {
+            text-align: center;
+            font-size: 16px;
+            color: $white;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .ordering {
+        &__steps-list {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__step {
+            width: 135px;
+            position: relative;
+
+
+            &:not(:last-child) {
+                margin-bottom: 130px;
+
+                &:after {
+                    top: 215px;
+                    left: 30px;
+                    width: 80px;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.navigation {
+    &__list {
+        display: flex;
+
+        &-item {
+            &+& {
+                margin-left: 60px;
+            }
+        }
+
+        &-link {
+            @include latoFont($bold);
+            font-size: 13px;
+            color: $white;
+            text-transform: uppercase;
+            transition: color 300ms ease;
+
+            &:hover {
+                color: $blue1;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .navigation {
+        &__list {
+            flex-direction: column;
+
+            &-item {
+                &+& {
+                    font-size: 16px;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.payments-list {
+    &__item {
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+    }
+
+    &__link {
+        display: inline-block;
+        box-sizing: border-box;
+        padding-left: 24px;
+        min-height: 15px;
+        line-height: 15px;
+        font-size: 13px;
+        color: $gray3;
+        background: no-repeat left center;
+
+        &_qiwi {
+            background-image: url('../img/quick-wallet.png');
+        }
+
+        &_yandex {
+            background-image: url('../img/yandex-money.png');
+        }
+
+        &_webmoney {
+            background-image: url('../img/wab-money.png');
+        }
+    }
+}

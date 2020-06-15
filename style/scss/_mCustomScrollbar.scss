@@ -1,0 +1,25 @@
+.mCustomScrollbar {
+    .mCSB_draggerContainer {
+        width: 7px;
+        background-color: $gray5;
+        margin: 4px 0;
+        border-radius: 4px;
+
+        .mCSB_dragger {
+            max-height: 182px !important;
+            height: 53px !important;
+
+            .mCSB_dragger_bar {
+                width: 7px;
+                height: 53px;
+                background-color: $blue4;
+                border-radius: 4px;
+            }
+
+            .mCSB_draggerRail {
+                background-color: transparent;
+            }
+        }
+
+    }
+}

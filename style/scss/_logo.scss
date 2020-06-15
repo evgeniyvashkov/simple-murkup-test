@@ -1,0 +1,13 @@
+.logo {
+    &__text {
+        @include ralewayFont($heavy);
+        font-size: 28px;
+        color: $white;
+        text-transform: uppercase;
+
+        &-custom {
+            margin-left: -4px;
+            color: $blue;
+        }
+    }
+}
